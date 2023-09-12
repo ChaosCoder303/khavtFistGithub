@@ -1,0 +1,56 @@
+<div class="box-login login" id="signUp" data-aos="fade-up">
+    <div class="box-login-title">
+        <h2><strong>
+                Đăng Nhập
+            </strong>
+        </h2>
+        <form ng-submit="login()" name="form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="email" id="inputEmailSignUp" name="txtEmail" required ng-model="email">
+                        <span></span>
+                        <label for="inputEmailSignUp">
+                            Email
+                        </label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtEmail.$dirty&&form.txtEmail.$error.required">Vui lòng nhập
+                            email</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="password" id="inputMatKhauSignUp" minlength="6" maxlength="10" name="txtPassword"
+                            required ng-model="password">
+                        <span></span>
+                        <label for="inputMatKhauSignUp">Mật Khẩu</label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtPassword.$dirty&&form.txtPassword.$error.required">Vui lòng
+                            nhập mật khẩu</small>
+
+                        <small class="text-warning"
+                            ng-show="form.txtPassword.$dirty && (form.txtPassword.$error.minlength || form.txtPassword.$error.maxlength)">Vui
+                            lòng nhập mật khẩu lớn hơn 6 nhỏ hơn 10!</small>
+                    </div>
+                </div>
+                <div class="col-12 form-forgotPass mt-2 mb-2">
+                    <a href="" data-toggle="modal" data-target="#exampleModal">Quên mật
+                        khẩu?</a>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="rounded-pill btn-block btn-signIn">Đăng Nhập</button>
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-light text-center mt-2">Hoặc Đăng Nhập Bằng</p>
+                </div>
+                <div class="col-12 form-logo-login">
+                    <a href="https://www.facebook.com/thanh.kha.1447/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://myaccount.google.com/" target="_blank"><i
+                            class="fa-brands fa-google-plus-g"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

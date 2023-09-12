@@ -1,0 +1,66 @@
+<div class="box-login login" id="changePass" data-aos="fade-up">
+    <div class="box-login-title">
+        <h2><strong>
+                Đổi Mật Khẩu
+            </strong>
+        </h2>
+        <form ng-submit="changePassword()" name="form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="password" id="inputMatKhauchangePass"  minlength="5" maxlength="10" name="txtPassword" ng-model="Password" required>
+                        <span></span>
+                        <label for="inputMatKhauchangePass">Mật Khẩu Hiện Tại</label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtPassword.$dirty&&form.txtPassword.$error.required">Vui lòng
+                            nhập mật khẩu</small>
+                        <small class="text-warning"
+                            ng-show="form.txtPassword.$dirty && (form.txtPassword.$error.minlength || form.txtPassword.$error.maxlength)">Vui
+                            lòng nhập mật khẩu lớn hơn 6 nhỏ hơn 10!</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="password" id="inputMatKhauchangePass1"  minlength="5" maxlength="10" name="txtNewPassword" required ng-model="newPassword">
+                        <span></span>
+                        <label for="inputMatKhauchangePass1">Mật Khẩu Mới</label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtNewPassword.$dirty&&form.txtNewPassword.$error.required">Vui lòng
+                            nhập mật khẩu</small>
+
+                        <small class="text-warning"
+                            ng-show="form.txtNewPassword.$dirty && (form.txtNewPassword.$error.minlength || form.txtNewPassword.$error.maxlength)">Vui
+                            lòng nhập mật khẩu lớn hơn 6 nhỏ hơn 10!</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="password" id="inputMatKhauchangePass2"  minlength="5" maxlength="10" name="txtConfirmPassword" required ng-model="confirmPassword">
+                        <span></span>
+                        <label for="inputMatKhauchangePass2">Xác Nhận Mật Khẩu</label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtConfirmPassword.$dirty&&form.txtConfirmPassword.$error.required">Vui lòng
+                            nhập mật khẩu</small>
+
+                        <small class="text-warning"
+                            ng-show="form.txtConfirmPassword.$dirty && (form.txtConfirmPassword.$error.minlength || form.txtConfirmPassword.$error.maxlength)">Vui
+                            lòng nhập mật khẩu lớn hơn 6 nhỏ hơn 10!</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="rounded-pill btn-block btn-signIn">Xác Nhận</button>
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-light text-center mt-2">Hoặc Đăng Nhập Bằng</p>
+                </div>
+                <div class="col-12 form-logo-login">
+                    <a href="https://www.facebook.com/thanh.kha.1447/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://myaccount.google.com/" target="_blank"><i
+                            class="fa-brands fa-google-plus-g"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="box-login login" id="profile" data-aos="fade-up">
+    <div class="box-login-title">
+        <h2><strong>
+                Thông Tin
+            </strong>
+        </h2>
+        <form ng-submit="updateUser()" name="form">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input"> 
+                        <input type="text" id="inputUsernameprofile" name="txtUsername" required ng-model="profile.username">
+                        <span></span>
+                        <label for="inputUsernameprofile">
+                            Tên Đăng Nhập
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtUsername.$dirty&&form.txtUsername.$error.required">Vui lòng nhập tên tài khoản</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="text" id="inputHoTenprofile" name="txtFullname" required ng-model="profile.fullname">
+                        <span></span>
+                        <label for="inputHoTenprofile">
+                            Họ Và Tên
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtFullname.$dirty&&form.txtFullname.$error.required">Vui lòng nhập tên đầy đủ</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="tel" id="inputSoDTprofile" name="txtNumberphone" required ng-model="profile.numberphone">
+                        <span></span>
+                        <label for="inputSoDTprofile">
+                            Số Điện Thoại
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtNumberphone.$dirty&&form.txtNumberphone.$error.required">Vui lòng nhập số điện thoại</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="email" id="inputEmailprofile" name="txtEmail" required ng-model="profile.email">
+                        <span></span>
+                        <label for="inputEmailprofile">
+                            Email
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtEmail.$dirty&&form.txtEmail.$error.required">Vui lòng nhập email</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <button type="submit" class="rounded-pill btn-block btn-signIn">Cập Nhật</button>
+            </div>
+        </form>
+    </div>
+</div>

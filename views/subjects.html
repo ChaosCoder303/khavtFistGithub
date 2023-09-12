@@ -1,0 +1,51 @@
+<div class="box-content check" id="subjects">
+
+    <div class="box-content-title text-center">
+        <h1>Phần Thi Trắc Nghiệm</h1>
+        <p>Chọn các môn thi trắc nghiệm bạn cần!</p>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-3 " ng-repeat="subject in subjects |orderBy:pop|limitTo:8:begin">
+            <div class="list-subject">
+                <div class="card mb-3" style="background-color: blueviolet;">
+                    <img ng-src="/images/{{subject.Logo}}" class="img-fluid">
+                    <div class="card-body">
+                        <h6>{{subject.Name}}</h6>
+                        <button class="btn btn-outline-warning"> <a href="#!test/{{subject.Id}}/{{subject.Name}}">Thi Trắc
+                                Nghiệm></a> </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-around">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="" aria-label="First" ng-click="first()">
+                        <span aria-hidden="true">First</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="" aria-label="Previous" ng-click="previous()">
+                        <span aria-hidden="true">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="" aria-label="Next" ng-click="next()">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+                
+                <li class="page-item">
+                    <a class="page-link" href="" aria-label="Last" ng-click="last()">
+                        <span aria-hidden="true">Last</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

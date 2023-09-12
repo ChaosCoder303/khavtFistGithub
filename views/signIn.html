@@ -1,0 +1,74 @@
+<div class="box-login login" id="signIn" data-aos="fade-up">
+    <div class="box-login-title">
+        <h2><strong>
+                Đăng Ký Thông Tin
+            </strong>
+        </h2>
+        <form ng-submit="register()" name="form">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="text" id="inputUsernameSignIn" name="txtUsername" required ng-model="username">
+                        <span></span>
+                        <label for="inputUsernameSignIn">
+                            Tên Đăng Nhập
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtUsername.$dirty&&form.txtUsername.$error.required">Vui lòng nhập tên tài khoản</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="text" id="inputHoTenSignIn" required name="txtFullname" ng-model="fullname">
+                        <span></span>
+                        <label for="inputHoTenSignIn">
+                            Họ Và Tên
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtFullname.$dirty&&form.txtFullname.$error.required">Vui lòng nhập tên đầy đủ</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="tel" id="inputSoDTSignIn" pattern="0\d{9,10}" required  name="txtNumberphone" ng-model="numberphone">
+                        <span></span>
+                        <label for="inputSoDTSignIn">
+                            Số Điện Thoại
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtNumberphone.$dirty&&form.txtNumberphone.$error.required">Vui lòng nhập số điện thoại</small>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtNumberphone.$dirty&&form.txtNumberphone.$error.pattern">Vui lòng nhập số điện thoại đúng định dạng!</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="email" id="inputEmailSignIn" required name="txtEmail" ng-model="email">
+                        <span></span>
+                        <label for="inputEmailSignIn">
+                            Email
+                        </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtEmail.$dirty&&form.txtEmail.$error.required">Vui lòng nhập email</small>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-group form-input">
+                        <input type="password" id="inputMatKhauSignIn" minlength="5" maxlength="10" required name="txtPassword" ng-model="password">
+                        <span></span>
+                        <label for="inputMatKhauSignIn">Mật Khẩu </label>
+                        <small class="text-warning" ng-show="form.$dirty&&form.txtPassword.$dirty&&form.txtPassword.$error.required">Vui lòng nhập mật khẩu</small>
+                        <small class="text-warning" ng-show="form.txtPassword.$dirty && (form.txtPassword.$error.minlength || form.txtPassword.$error.maxlength)">Vui lòng nhập mật khẩu lớn hơn 6 nhỏ hơn 10!</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <button type="submit" class="rounded-pill btn-block btn-signIn">Đăng Ký</button>
+            </div>
+            <div class="col-12">
+                <p class="font-weight-light text-center mt-2">Hoặc Đăng Ký Bằng</p>
+            </div>
+            <div class="col-12 form-logo-login">
+                <a href="https://www.facebook.com/thanh.kha.1447/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </form>
+    </div>
+</div>

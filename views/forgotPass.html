@@ -1,0 +1,25 @@
+<div class="box-login login" id="changePass" data-aos="fade-up">
+    <div class="box-login-title">
+        <h2><strong>
+                Quên Mật Khẩu
+            </strong>
+        </h2>
+        <form ng-submit="forgotPassword()" name="form">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group form-input">
+                        <input type="email" id="inputMatKhauchangePass" name="txtEmail" ng-model="email" required >
+                        <span></span>
+                        <label for="inputMatKhauchangePass">Email</label>
+                        <small class="text-warning"
+                            ng-show="form.$dirty&&form.txtEmail.$dirty&&form.txtEmail.$error.required">Vui lòng nhập
+                            email</small>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="rounded-pill btn-block btn-signIn">Xác Nhận</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

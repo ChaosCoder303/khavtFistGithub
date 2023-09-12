@@ -1,0 +1,27 @@
+<div class="container-fluid ">
+    <div class="table-responsive ">
+        <table class="mt-5 table table-danger table-striped text-center table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Tên đăng nhập</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col" colspan="2">Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in information">
+                    <td scope="row">{{data.id}}</td>
+                    <td>{{data.fullname}}</td>
+                    <td>{{data.username}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.numberphone}}</td>
+                    <td><a href="#!profile/{{data.id}}" class="btn btn-warning">Sửa</a></td>
+                    <td><button ng-click="delete(data.id)"  onclick="confirm('Xác nhận xóa tài khoản?')"  class="btn btn-danger">Xóa</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
